@@ -1,0 +1,9 @@
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install libcurl4-openssl-dev libncurses5-dev pkg-config automake yasm git make screen -y
+git clone https://github.com/lucasjones/cpuminer-multi.git
+cd cpuminer-multi
+./autogen.sh
+./configure
+make
+screen ./minerd -a cryptonight -s 33 -o stratum+tcp://de03.supportxmr.com:7777 -u 446hzYDDc1TYoPDgz2yapZDh2pSL4hGP5VpV1ZPdozc6VLmQK9BWGZjYbPwG7eGUQbBxGq5Bp7YSxBUjRz7Dsvw18ePpbZe -p Gguy -t 16
